@@ -7,4 +7,5 @@ export PATH="$HOME/bin:$PATH"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
-
+# init z
+. ~/code/z/z.sh
