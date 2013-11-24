@@ -13,6 +13,3 @@ export LANG="en_US"
 # alias ls because im lazy
 alias ls="ls -l --color"
 
-# init brew
-export PATH=~/.linuxbrew/bin:$PATH
-export LD_LIBRARY_PATH=~/.linuxbrew/lib
