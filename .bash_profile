@@ -11,4 +11,8 @@ export LANG="en_US"
 . ~/code/z/z.sh
 
 # alias ls because im lazy
-alias ls="ls -al --color"
+alias ls="ls -l --color"
+
+# init brew
+export PATH=~/.linuxbrew/bin:$PATH
+export LD_LIBRARY_PATH=~/.linuxbrew/lib
