@@ -11,5 +11,5 @@ export LANG="en_US"
 . ~/code/z/z.sh
 
 # alias ls because im lazy
-alias ls="ls -l --color"
+alias ls="ls -l"
 
