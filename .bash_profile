@@ -10,6 +10,6 @@ export LANG="en_US"
 # init z
 . ~/code/z/z.sh
 
-# alias ls because im lazy
-alias ls="ls -l"
+# init git completion
+. ~/code/git-completion.bash
 
