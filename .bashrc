@@ -13,3 +13,6 @@ export LANG="en_US"
 # init git completion
 . ~/code/git-completion.bash
 
+# source git pruning
+source ~/code/git-prune.bash
+
