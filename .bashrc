@@ -16,3 +16,5 @@ export LANG="en_US"
 # source git pruning
 source ~/code/git-prune.bash
 
+# project binaries
+export PATH="$PATH:./node_modules/.bin"
