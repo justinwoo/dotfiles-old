@@ -1,0 +1,11 @@
+#!/usr/bin/ruby
+
+if ARGV.length == 0
+  puts 'Usage: stash-apply {stashId}'
+  puts '{stashId}: ID of the stash that should be applied.'
+  puts 'Your stash list:'
+  puts '----------------'
+  exec('git stash list')
+else
+  exec('git stash apply stash@{%s}' % ARGV[0])
+end
