@@ -18,3 +18,6 @@ source ~/code/git-prune.bash
 
 # project binaries
 export PATH="$PATH:./node_modules/.bin"
+
+# convenience aliases
+alias "npm-links"="ls -l node_modules/ | grep ^l"
