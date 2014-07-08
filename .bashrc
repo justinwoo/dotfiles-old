@@ -21,4 +21,7 @@ export PATH="$PATH:./node_modules/.bin"
 
 # convenience aliases
 alias "npm-links"="ls -l node_modules/ | grep ^l"
-alias ccat="pygmentize"
+alias "ccat"="pygmentize"
+alias "pb"="pbcopy"
+alias "gib"="branch"
+alias "gip"="git-prune"
