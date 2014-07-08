@@ -1,0 +1,5 @@
+#!/usr/bin/ruby
+puts 'My cruddy git branches:'
+puts '*-~-*-~-*-~*-~*-~-*-~-*-~-*-~-*'
+exec('git branch;
+ echo -------------------------------')
