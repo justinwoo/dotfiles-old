@@ -1,5 +1,6 @@
 # Sexy Bash Prompt
 # as taken from https://github.com/gf3/dotfiles
+# additional functionality added by me
 
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]]  && infocmp gnome-256color >/dev/null 2>&1; then export TERM=gnome-256color
 elif [[ $TERM != dumb ]] && infocmp xterm-256color >/dev/null 2>&1; then export TERM=xterm-256color
@@ -11,8 +12,10 @@ if tput setaf 1 &> /dev/null; then
       MAGENTA=$(tput setaf 9)
       ORANGE=$(tput setaf 172)
       GREEN=$(tput setaf 190)
+      TRUEGREEN=$(tput setaf 050)
       PURPLE=$(tput setaf 141)
       WHITE=$(tput setaf 0)
+      RED=$(tput setaf 1)
     else
       MAGENTA=$(tput setaf 5)
       ORANGE=$(tput setaf 4)
@@ -38,6 +41,26 @@ parse_git_dirty () {
 parse_git_branch () {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
+parse_commits_ahead () {
+  [[ $(git status 2> /dev/null | grep ahead) != "" ]] && ahead='+'$(git status | grep -Eo '\d+')
+}
+parse_commits_behind () {
+  [[ $(git status 2> /dev/null | grep behind) != "" ]] && behind='-'$(git status | grep -Eo '\d+')
+}
+parse_commits_status () {
+  parse_commits_ahead
+  parse_commits_behind
+  if [[ $ahead || $behind ]]
+  then
+    echo $WHITE'('$TRUEGREEN$ahead$RED$behind$WHITE')'
+  else
+    echo $WHITE'(0)'
+  fi
+}
 
-PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
-
+PS1="\[${BOLD}${MAGENTA}\]@\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w \
+\$(if [[ -n \$(git branch 2> /dev/null) ]]
+then
+echo $WHITE\"on \[$PURPLE\]\$(parse_git_branch) \$(parse_commits_status)\"
+fi) \
+\[$WHITE\]\n\$ \[$RESET\]"
