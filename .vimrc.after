@@ -1,0 +1,5 @@
+""make commands easier to input
+:map ; :
+
+""reaching for esc is hard
+:imap jj <Esc>
