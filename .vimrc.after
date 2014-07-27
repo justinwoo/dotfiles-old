@@ -3,3 +3,9 @@
 
 ""reaching for esc is hard
 :imap jj <Esc>
+
+""set my font size to be legible
+set guifont=Monaco:h18
+
+""muh colors
+colors inkpot
