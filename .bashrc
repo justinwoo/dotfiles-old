@@ -25,7 +25,3 @@ alias "ccat"="pygmentize"
 alias "pb"="pbcopy"
 alias "gib"="branch"
 alias "gip"="git-prune"
-
-# print my todo list
-cat ~/.todo
-
