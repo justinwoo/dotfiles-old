@@ -1,15 +1,15 @@
 ""make commands easier to input
-:map ; :
+map ; :
 
 ""reaching for esc is hard
-:imap jj <Esc>
-:imap kj <Esc>
+imap jj <Esc>
+imap kj <Esc>
 
 ""set my font size to be legible
 set guifont=Monaco:h16
 
 ""muh colors
-colors kellys
+colors molokai
 
 ""ignore crap with ctrlP to make it usable
 let g:ctrlp_custom_ignore = {
