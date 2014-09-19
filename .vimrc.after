@@ -1,6 +1,9 @@
 ""make commands easier to input
 map ; :
 
+""rebind ex mode to replay macro
+map Q @q
+
 ""reaching for esc is hard
 imap jj <Esc>
 imap kj <Esc>
