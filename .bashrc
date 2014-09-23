@@ -18,7 +18,10 @@ export LANG="en_US"
 source ~/code/git-prune.bash
 
 # project binaries
-export PATH="$PATH:./node_modules/.bin"
+export PATH="$PATH:./node_modules/.bin:./bin"
+
+# rbenv shims
+export PATH="$HOME/.rbenv/shims:$PATH"
 
 # convenience aliases
 alias "npm-links"="ls -l node_modules/ | grep ^l"
