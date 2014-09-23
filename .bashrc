@@ -3,6 +3,7 @@
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH="$HOME/bin:$PATH:$HOME/.npm/bin"
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
