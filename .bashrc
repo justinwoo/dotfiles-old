@@ -23,13 +23,5 @@ export PATH="$PATH:./node_modules/.bin:./bin"
 # rbenv shims
 export PATH="$HOME/.rbenv/shims:$PATH"
 
-# convenience aliases
-alias "gemacs"="open -a Emacs ."
-alias "ccat"="pygmentize"
-alias "pb"="pbcopy"
-alias "gib"="branch"
-alias "gip"="git-prune"
-alias "gis"="git status -sb"
-alias "gid"="git diff"
-alias "gids"="git diff --staged"
-alias "gl"='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
+# source aliases
+source ~/.bash_alises
