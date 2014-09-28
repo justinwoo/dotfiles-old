@@ -24,7 +24,7 @@ export PATH="$PATH:./node_modules/.bin:./bin"
 export PATH="$HOME/.rbenv/shims:$PATH"
 
 # convenience aliases
-alias "npm-links"="ls -l node_modules/ | grep ^l"
+alias "gemacs"="open -a Emacs ."
 alias "ccat"="pygmentize"
 alias "pb"="pbcopy"
 alias "gib"="branch"
