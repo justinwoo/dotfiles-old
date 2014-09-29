@@ -24,4 +24,4 @@ export PATH="$PATH:./node_modules/.bin:./bin"
 export PATH="$HOME/.rbenv/shims:$PATH"
 
 # source aliases
-source ~/.bash_alises
+source ~/.bash_aliases
