@@ -10,3 +10,4 @@ alias "gids"="git diff --staged"
 alias "gl"='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
 alias "gil"='git log --decorate --stat --graph --pretty=format:"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n"'
 alias "gild"="git log --decorate"
+alias "gsa"="stash-apply"
