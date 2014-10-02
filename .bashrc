@@ -4,24 +4,24 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH="$HOME/bin:$PATH:$HOME/.npm/bin"
 export PATH="$HOME/.rbenv/bin:$PATH"
+# project binaries
+export PATH="$PATH:./node_modules/.bin:./bin"
+# rbenv shims
+export PATH="$HOME/.rbenv/shims:$PATH"
+# path for scripting tmux for stuff im working on
+export PATH="$HOME/tmux-scripts:$PATH"
 
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 # init z
-. ~/code/z/z.sh
+. $HOME/code/z/z.sh
 
 # init git completion
-. ~/code/git-completion.bash
+. $HOME/code/git-completion.bash
 
-# source git pruning
-source ~/code/git-prune.bash
-
-# project binaries
-export PATH="$PATH:./node_modules/.bin:./bin"
-
-# rbenv shims
-export PATH="$HOME/.rbenv/shims:$PATH"
+# init tmux completion
+. $HOME/code/tmux.completion.bash
 
 # source aliases
 source ~/.bash_aliases
