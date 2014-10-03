@@ -8,8 +8,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$PATH:./node_modules/.bin:./bin"
 # rbenv shims
 export PATH="$HOME/.rbenv/shims:$PATH"
-# path for scripting tmux for stuff im working on
-export PATH="$HOME/tmux-scripts:$PATH"
+
+# i guess i'm a vim user
+export EDITOR='vim'
 
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
