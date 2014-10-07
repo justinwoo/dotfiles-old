@@ -1,3 +1,6 @@
+"use lisp names
+set lisp
+
 ""use the system clipboard
 set clipboard=unnamed
 
