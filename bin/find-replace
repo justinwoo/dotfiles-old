@@ -1,0 +1,17 @@
+#!/usr/bin/ruby
+
+dir = ARGV[0]
+pattern = ARGV[1]
+replacement = ARGV[2]
+
+if ARGV.length == 2
+  exec("ag #{pattern} #{dir}")
+elsif ARGV.length != 3
+  puts 'Usage: replace {dir} {pattern} [{replacement}]'
+  puts '{dir}: relative directory path to go to'
+  puts '{pattern}: regex pattern to match for'
+  puts '[{replacement}]: string to replace with'
+  puts 'omission of {replacement} does simple search using ag'
+else
+  exec("ag -l '#{pattern}' #{dir} | xargs sed -i '' 's/#{pattern}/#{replacement}/g'")
+end
