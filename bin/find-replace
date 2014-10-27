@@ -13,5 +13,5 @@ elsif ARGV.length != 3
   puts '[{replacement}]: string to replace with'
   puts 'omission of {replacement} does simple search using ag'
 else
-  exec("ag -l '#{pattern}' #{dir} | xargs sed -i '' 's/#{pattern}/#{replacement}/g'")
+  exec("ack -l '#{pattern}' #{dir} | xargs sed -i '' 's/#{pattern}/#{replacement}/g'")
 end
