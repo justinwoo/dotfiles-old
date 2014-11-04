@@ -1,17 +1,12 @@
-#!/usr/bin/ruby
+#!/bin/sh
+#
+# Find and replace by a given list of files.
+#
+# replace foo bar **/*.rb
 
-dir = ARGV[0]
-pattern = ARGV[1]
-replacement = ARGV[2]
+find_this=$1
+shift
+replace_with=$1
+shift
 
-if ARGV.length == 2
-  exec("ag #{pattern} #{dir}")
-elsif ARGV.length != 3
-  puts 'Usage: replace {dir} {pattern} [{replacement}]'
-  puts '{dir}: relative directory path to go to'
-  puts '{pattern}: regex pattern to match for'
-  puts '[{replacement}]: string to replace with'
-  puts 'omission of {replacement} does simple search using ag'
-else
-  exec("ack -l '#{pattern}' #{dir} | xargs sed -i '' 's/#{pattern}/#{replacement}/g'")
-end
+ag -l $find_this $* | xargs sed -i '' "s/$find_this/$replace_with/g"
