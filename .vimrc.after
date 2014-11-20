@@ -22,6 +22,6 @@ colors molokai
 
 ""ignore crap with ctrlP to make it usable
 let g:ctrlp_custom_ignore = {
-\ 'dir':  '\.git$\|\.yardoc\|node_modules\|bower_components\|dist\|build\|log\|tmp$',
+\ 'dir':  '\.git$\|\.yardoc\|node_modules\|public\|bower_components\|dist\|build\|log\|tmp$',
 \ 'file': '\.so$\|\.dat$|\.DS_Store$'
 \ }
