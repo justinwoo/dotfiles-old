@@ -2,3 +2,5 @@
 set columns=120
 ""set me some lines
 set lines=80
+"" set transparency
+set transparency=5

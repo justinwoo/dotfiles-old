@@ -1,17 +1,13 @@
-"use lisp names
-set lisp
-
 ""use the system clipboard
 set clipboard=unnamed
 
 ""make commands easier to input
 map ; :
 
-""rebind ex mode to replay macro
+""rebind ex mode to replay q macro
 map Q @q
 
 ""reaching for esc is hard
-imap jj <Esc>
 imap kj <Esc>
 
 ""set my font size to be legible
