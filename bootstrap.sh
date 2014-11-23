@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
-function doIt() {
-  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-        --exclude "README.md" --exclude "install-deps.sh" -av --no-perms . ~
-  source ~/.bash_profile
-}
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-  doIt
-else
-   read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
-   echo
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-      doIt
-   fi
-fi
-unset doIt
+## bash settings
+ln -nsf `pwd`/config/bashrc ~/.bashrc
+ln -nsf `pwd`/config/bash_profile ~/.bash_profile
+ln -nsf `pwd`/config/bash_aliases ~/.bash_aliases
+ln -nsf `pwd`/config/bash_prompt ~/.bash_prompt
+
+## vim settings
+ln -nsf `pwd`/config/vimrc.after ~/.vimrc.after
+ln -nsf `pwd`/config/gvimrc.after ~/.gvimrc.after
+
+## tmux
+ln -nsf `pwd`/tmux.conf ~/.tmux.conf
+
+## extra stuff
+ln -nsf `pwd`/bin ~/bin
+ln -nsf `pwd`/janus ~/.janus
+
+echo 'symlinks made, check this file for links'

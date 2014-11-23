@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 mkdir ~/code
 cd ~/code
 git clone https://github.com/rupa/z.git
