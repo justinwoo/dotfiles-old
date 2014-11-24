@@ -10,7 +10,7 @@ ln -nsf `pwd`/config/vimrc.after ~/.vimrc.after
 ln -nsf `pwd`/config/gvimrc.after ~/.gvimrc.after
 
 ## tmux
-ln -nsf `pwd`/tmux.conf ~/.tmux.conf
+ln -nsf `pwd`/config/tmux.conf ~/.tmux.conf
 
 ## extra stuff
 ln -nsf `pwd`/bin ~/bin
