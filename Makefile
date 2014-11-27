@@ -4,6 +4,6 @@
 # install: make the symlinks from this repo needed for dotfiles
 
 preinstall:
-	./scripts/install.sh
+	./scripts/preinstall.sh
 install:
-	./scripts/bootstrap.sh
+	./scripts/install.sh
