@@ -4,7 +4,7 @@ collection of my dotfiles to be slowly added to over time...
 
 # setup
 
-run `./install` and `./bootstrap`
+run `make; make install`
 
 WARNING: `ln -nsf` used. back up whatever you don't want destroyed.
 
