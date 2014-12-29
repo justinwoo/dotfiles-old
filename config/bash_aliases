@@ -2,6 +2,8 @@
 alias "gemacs"="open -a Emacs ."
 alias "ccat"="pygmentize"
 alias "pb"="pbcopy"
+alias "bi"="bundle install"
+alias "be"="bundle exec"
 
 # git related following
 alias "gib"="branch"
