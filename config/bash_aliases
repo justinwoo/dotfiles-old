@@ -1,5 +1,6 @@
 # convenience aliases
 alias "gemacs"="open -a Emacs ."
+alias "em"="emacs"
 alias "ge"="gemacs"
 alias "ccat"="pygmentize"
 alias "pb"="pbcopy"
