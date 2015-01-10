@@ -1,7 +1,7 @@
 # Prompt
 [[ -f "$HOME/.bash_prompt" ]] && source "$HOME/.bash_prompt"
 # overwrite path because i dont know what it's gonna be
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/bin:$PATH:$HOME/.npm/bin"
 export PATH="$HOME/.rbenv/bin:$PATH"
 
@@ -9,6 +9,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$PATH:./node_modules/.bin:./bin"
 # rbenv shims
 export PATH="$HOME/.rbenv/shims:$PATH"
+# clojurescript
+export CLOJURESCRIPT_HOME="$HOME/code/clojurescript"
+export PATH="$CLOJURESCRIPT_HOME/script:$CLOJURESCRIPT_HOME/bin:$PATH"
 
 # i guess i'm a vim user
 export EDITOR='vim'
