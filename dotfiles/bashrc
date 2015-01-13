@@ -2,11 +2,12 @@
 [[ -f "$HOME/.bash_prompt" ]] && source "$HOME/.bash_prompt"
 # overwrite path because i dont know what it's gonna be
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$HOME/bin:$PATH:$HOME/.npm/bin"
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.npm/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # project binaries for node
-export PATH="$PATH:./node_modules/.bin:./bin"
+export PATH="./node_modules/.bin:./bin:$PATH"
 # rbenv shims
 export PATH="$HOME/.rbenv/shims:$PATH"
 # clojurescript
