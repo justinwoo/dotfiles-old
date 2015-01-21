@@ -1,0 +1,8 @@
+""set my font size to be legible
+set guifont=Menlo:h16
+""set me some columns
+set columns=120
+""set me some lines
+set lines=80
+"" set transparency
+set transparency=5
